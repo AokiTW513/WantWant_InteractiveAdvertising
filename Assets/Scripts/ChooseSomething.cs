@@ -84,208 +84,223 @@ public class ChooseSomething : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Level1")
         {
-            if (button.gameObject.tag == "Good")
-            {
-                Debug.Log("Good :D");
-                switch (_chooseFoodIndex)
-                {
-                    case 0:
-                        if (button == _noodleButton)
-                        {
-                            _chooseFoodIndex++;
-                            _noodleButton.gameObject.SetActive(false);
-                            Debug.Log("Nice OwO");
-                            _goodBadText.text = "已選擇麵";
-                        }
-                        else
-                        {
-                            Debug.Log("You Choose Wrong One");
-                            _goodBadText.text = "老兄你選錯摟";
-                        }
-                        break;
-                    case 1:
-                        if (button == _soupButton)
-                        {
-                            _chooseFoodIndex++;
-                            _soupButton.gameObject.SetActive(false);
-                            Debug.Log("Nice OwO");
-                            _goodBadText.text = "已選擇湯";
-                        }
-                        else
-                        {
-                            Debug.Log("You Choose Wrong One");
-                            _goodBadText.text = "老兄你選錯摟";
-                        }
-                        break;
-                    case 2:
-                        if (button == _sandwichButton)
-                        {
-                            _chooseFoodIndex++;
-                            _sandwichButton.gameObject.SetActive(false);
-                            Debug.Log("Nice OwO");
-                            _goodBadText.text = "已選擇三明治";
-                        }
-                        else
-                        {
-                            Debug.Log("You Choose Wrong One");
-                            _goodBadText.text = "老兄你選錯摟";
-                        }
-                        break;
-                    default:
-                        Debug.Log("Wait What?");
-                        break;
-                }
-            }
-            else if (button.gameObject.tag == "Bad")
-            {
-                Debug.Log("Bad :(");
-                _goodBadText.text = "老兄你選這什麼垃圾食物";
-                _health -= 10f;
-                _healthText.text = "Health:" + _health;
-            }
-            else
-            {
-                Debug.LogError("Error");
-                _goodBadText.text = "好像不該看到這個，出Error了:(";
-            }
+            Scene1Button(button);    
         }
         else if (SceneManager.GetActiveScene().name == "Level2")
         {
-            if (button.gameObject.tag == "Good")
-            {
-                Debug.Log("Good :D");
-                switch (_chooseFoodIndex)
-                {
-                    case 0:
-                        if (button == _idk1Button)
-                        {
-                            _chooseFoodIndex++;
-                            _idk1Button.gameObject.SetActive(false);
-                            Debug.Log("Nice OwO");
-                            _goodBadText.text = "已選擇麵";
-                        }
-                        else
-                        {
-                            Debug.Log("You Choose Wrong One");
-                            _goodBadText.text = "老兄你選錯摟";
-                        }
-                        break;
-                    case 1:
-                        if (button == _idk2Button)
-                        {
-                            _chooseFoodIndex++;
-                            _idk2Button.gameObject.SetActive(false);
-                            Debug.Log("Nice OwO");
-                            _goodBadText.text = "已選擇湯";
-                        }
-                        else
-                        {
-                            Debug.Log("You Choose Wrong One");
-                            _goodBadText.text = "老兄你選錯摟";
-                        }
-                        break;
-                    case 2:
-                        if (button == _idk3Button)
-                        {
-                            _chooseFoodIndex++;
-                            _idk3Button.gameObject.SetActive(false);
-                            Debug.Log("Nice OwO");
-                            _goodBadText.text = "已選擇三明治";
-                        }
-                        else
-                        {
-                            Debug.Log("You Choose Wrong One");
-                            _goodBadText.text = "老兄你選錯摟";
-                        }
-                        break;
-                    default:
-                        Debug.Log("Wait What?");
-                        break;
-                }
-            }
-            else if (button.gameObject.tag == "Bad")
-            {
-                Debug.Log("Bad :(");
-                _goodBadText.text = "老兄你選這什麼垃圾食物";
-                _health -= 10f;
-                _healthText.text = "Health:" + _health;
-            }
-            else
-            {
-                Debug.LogError("Error");
-                _goodBadText.text = "好像不該看到這個，出Error了:(";
-            }    
+            Scene2Button(button);    
         }
         else if (SceneManager.GetActiveScene().name == "Level3")
         {
-            if (button.gameObject.tag == "Good")
-            {
-                Debug.Log("Good :D");
-                switch (_chooseFoodIndex)
-                {
-                    case 0:
-                        if (button == _idk5Button)
-                        {
-                            _chooseFoodIndex++;
-                            _idk5Button.gameObject.SetActive(false);
-                            Debug.Log("Nice OwO");
-                            _goodBadText.text = "已選擇麵";
-                        }
-                        else
-                        {
-                            Debug.Log("You Choose Wrong One");
-                            _goodBadText.text = "老兄你選錯摟";
-                        }
-                        break;
-                    case 1:
-                        if (button == _idk6Button)
-                        {
-                            _chooseFoodIndex++;
-                            _idk6Button.gameObject.SetActive(false);
-                            Debug.Log("Nice OwO");
-                            _goodBadText.text = "已選擇湯";
-                        }
-                        else
-                        {
-                            Debug.Log("You Choose Wrong One");
-                            _goodBadText.text = "老兄你選錯摟";
-                        }
-                        break;
-                    case 2:
-                        if (button == _idk7Button)
-                        {
-                            _chooseFoodIndex++;
-                            _idk7Button.gameObject.SetActive(false);
-                            Debug.Log("Nice OwO");
-                            _goodBadText.text = "已選擇三明治";
-                        }
-                        else
-                        {
-                            Debug.Log("You Choose Wrong One");
-                            _goodBadText.text = "老兄你選錯摟";
-                        }
-                        break;
-                    default:
-                        Debug.Log("Wait What?");
-                        break;
-                }
-            }
-            else if (button.gameObject.tag == "Bad")
-            {
-                Debug.Log("Bad :(");
-                _goodBadText.text = "老兄你選這什麼垃圾食物";
-                _health -= 10f;
-                _healthText.text = "Health:" + _health;
-            }
-            else
-            {
-                Debug.LogError("Error");
-                _goodBadText.text = "好像不該看到這個，出Error了:(";
-            }
+            Scene3Button(button);    
         }
         else
         {
             Debug.LogError("等等，你在哪個場景?");
+        }
+    }
+
+    private void Scene1Button(Button button)
+    {
+        if (button.gameObject.tag == "Good")
+        {
+            Debug.Log("Good :D");
+            switch (_chooseFoodIndex)
+            {
+                case 0:
+                    if (button == _noodleButton)
+                    {
+                        _chooseFoodIndex++;
+                        _noodleButton.gameObject.SetActive(false);
+                        Debug.Log("Nice OwO");
+                        _goodBadText.text = "已選擇麵";
+                    }
+                    else
+                    {
+                        Debug.Log("You Choose Wrong One");
+                        _goodBadText.text = "老兄你選錯摟";
+                    }
+                    break;
+                case 1:
+                    if (button == _soupButton)
+                    {
+                        _chooseFoodIndex++;
+                        _soupButton.gameObject.SetActive(false);
+                        Debug.Log("Nice OwO");
+                        _goodBadText.text = "已選擇湯";
+                    }
+                    else
+                    {
+                        Debug.Log("You Choose Wrong One");
+                        _goodBadText.text = "老兄你選錯摟";
+                    }
+                    break;
+                case 2:
+                    if (button == _sandwichButton)
+                    {
+                        _chooseFoodIndex++;
+                        _sandwichButton.gameObject.SetActive(false);
+                        Debug.Log("Nice OwO");
+                        _goodBadText.text = "已選擇三明治";
+                    }
+                    else
+                    {
+                        Debug.Log("You Choose Wrong One");
+                        _goodBadText.text = "老兄你選錯摟";
+                    }
+                    break;
+                default:
+                    Debug.Log("Wait What?");
+                    break;
+            }
+        }
+        else if (button.gameObject.tag == "Bad")
+        {
+            Debug.Log("Bad :(");
+            _goodBadText.text = "老兄你選這什麼垃圾食物";
+            _health -= 10f;
+            _healthText.text = "Health:" + _health;
+        }
+        else
+        {
+            Debug.LogError("Error");
+            _goodBadText.text = "好像不該看到這個，出Error了:(";
+        }
+    }
+
+    private void Scene2Button(Button button)
+    {
+        if (button.gameObject.tag == "Good")
+        {
+            Debug.Log("Good :D");
+            switch (_chooseFoodIndex)
+            {
+                case 0:
+                    if (button == _idk1Button)
+                    {
+                        _chooseFoodIndex++;
+                        _idk1Button.gameObject.SetActive(false);
+                        Debug.Log("Nice OwO");
+                        _goodBadText.text = "選擇了IDK1";
+                    }
+                    else
+                    {
+                        Debug.Log("You Choose Wrong One");
+                        _goodBadText.text = "老兄你選錯摟";
+                    }
+                    break;
+                case 1:
+                    if (button == _idk2Button)
+                    {
+                        _chooseFoodIndex++;
+                        _idk2Button.gameObject.SetActive(false);
+                        Debug.Log("Nice OwO");
+                        _goodBadText.text = "選擇IDK2";
+                    }
+                    else
+                    {
+                        Debug.Log("You Choose Wrong One");
+                        _goodBadText.text = "選擇IDK3的樣子";
+                    }
+                    break;
+                case 2:
+                    if (button == _idk3Button)
+                    {
+                        _chooseFoodIndex++;
+                        _idk3Button.gameObject.SetActive(false);
+                        Debug.Log("Nice OwO");
+                        _goodBadText.text = "已選擇三明治";
+                    }
+                    else
+                    {
+                        Debug.Log("You Choose Wrong One");
+                        _goodBadText.text = "老兄你選錯摟";
+                    }
+                    break;
+                default:
+                    Debug.Log("Wait What?");
+                    break;
+            }
+        }
+        else if (button.gameObject.tag == "Bad")
+        {
+            Debug.Log("Bad :(");
+            _goodBadText.text = "老兄你選這什麼垃圾食物";
+            _health -= 10f;
+            _healthText.text = "Health:" + _health;
+        }
+        else
+        {
+            Debug.LogError("Error");
+            _goodBadText.text = "好像不該看到這個，出Error了:(";
+        }          
+    }
+
+    private void Scene3Button(Button button)
+    {
+        if (button.gameObject.tag == "Good")
+        {
+            Debug.Log("Good :D");
+            switch (_chooseFoodIndex)
+            {
+                case 0:
+                    if (button == _idk5Button)
+                    {
+                        _chooseFoodIndex++;
+                        _idk5Button.gameObject.SetActive(false);
+                        Debug.Log("Nice OwO");
+                        _goodBadText.text = "已選擇麵";
+                    }
+                    else
+                    {
+                        Debug.Log("You Choose Wrong One");
+                        _goodBadText.text = "老兄你選錯摟";
+                    }
+                    break;
+                case 1:
+                    if (button == _idk6Button)
+                    {
+                        _chooseFoodIndex++;
+                        _idk6Button.gameObject.SetActive(false);
+                        Debug.Log("Nice OwO");
+                        _goodBadText.text = "已選擇湯";
+                    }
+                    else
+                    {
+                        Debug.Log("You Choose Wrong One");
+                        _goodBadText.text = "老兄你選錯摟";
+                    }
+                    break;
+                case 2:
+                    if (button == _idk7Button)
+                    {
+                        _chooseFoodIndex++;
+                        _idk7Button.gameObject.SetActive(false);
+                        Debug.Log("Nice OwO");
+                        _goodBadText.text = "已選擇三明治";
+                    }
+                    else
+                    {
+                        Debug.Log("You Choose Wrong One");
+                        _goodBadText.text = "老兄你選錯摟";
+                    }
+                    break;
+                default:
+                    Debug.Log("Wait What?");
+                    break;
+            }
+        }
+        else if (button.gameObject.tag == "Bad")
+        {
+            Debug.Log("Bad :(");
+            _goodBadText.text = "老兄你選這什麼垃圾食物";
+            _health -= 10f;
+            _healthText.text = "Health:" + _health;
+        }
+        else
+        {
+            Debug.LogError("Error");
+            _goodBadText.text = "好像不該看到這個，出Error了:(";
         }
     }
 }
