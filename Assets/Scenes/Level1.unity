@@ -994,10 +994,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47661dbcc4edc304a868e6eb6f1fdc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nooodleButton: {fileID: 102601529}
+  _noodleButton: {fileID: 102601529}
   _soupButton: {fileID: 1375337078}
   _sandwichButton: {fileID: 174314280}
   _FriedChickenButton: {fileID: 1835754840}
+  _idk1Button: {fileID: 0}
+  _idk2Button: {fileID: 0}
+  _idk3Button: {fileID: 0}
+  _idk4Button: {fileID: 0}
+  _idk5Button: {fileID: 0}
+  _idk6Button: {fileID: 0}
+  _idk7Button: {fileID: 0}
+  _idk8Button: {fileID: 0}
   _healthText: {fileID: 923619823}
   _goodBadText: {fileID: 184150826}
 --- !u!4 &1513429213
