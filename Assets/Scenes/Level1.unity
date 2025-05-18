@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 102601530}
   - component: {fileID: 102601529}
   m_Layer: 5
-  m_Name: 1
+  m_Name: Good2
   m_TagString: Good
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 174314278}
   - component: {fileID: 174314280}
   m_Layer: 5
-  m_Name: 3
+  m_Name: Good3
   m_TagString: Good
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -858,7 +858,7 @@ GameObject:
   - component: {fileID: 1375337076}
   - component: {fileID: 1375337078}
   m_Layer: 5
-  m_Name: 2
+  m_Name: Good1
   m_TagString: Good
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -994,20 +994,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47661dbcc4edc304a868e6eb6f1fdc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _noodleButton: {fileID: 102601529}
-  _soupButton: {fileID: 1375337078}
-  _sandwichButton: {fileID: 174314280}
-  _FriedChickenButton: {fileID: 1835754840}
-  _idk1Button: {fileID: 0}
-  _idk2Button: {fileID: 0}
-  _idk3Button: {fileID: 0}
-  _idk4Button: {fileID: 0}
-  _idk5Button: {fileID: 0}
-  _idk6Button: {fileID: 0}
-  _idk7Button: {fileID: 0}
-  _idk8Button: {fileID: 0}
+  _goodThings:
+  - {fileID: 1375337078}
+  - {fileID: 102601529}
+  - {fileID: 174314280}
+  _badThings:
+  - {fileID: 1835754840}
   _healthText: {fileID: 923619823}
   _goodBadText: {fileID: 184150826}
+  _isPlaying: 0
+  _isWin: 0
+  _isLose: 0
 --- !u!4 &1513429213
 Transform:
   m_ObjectHideFlags: 0
@@ -1036,7 +1033,7 @@ GameObject:
   - component: {fileID: 1835754841}
   - component: {fileID: 1835754840}
   m_Layer: 5
-  m_Name: 4
+  m_Name: Bad
   m_TagString: Bad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
